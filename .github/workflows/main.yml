@@ -1,0 +1,7 @@
+import yaml
+
+with open('config.yml', 'r') as f:
+    config = yaml.safe_load(f)
+
+script_name = config.get('script')
+exec(open(script_name).read())
