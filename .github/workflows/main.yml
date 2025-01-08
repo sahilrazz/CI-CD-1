@@ -1,6 +1,13 @@
----
-question: Hello, world!
-buttons:
-  - Exit: exit
-mandatory: True
----
+name: Print Hello World
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, World!"
